@@ -52,9 +52,9 @@
 													</div>
 													<div class="col-md-6">
 														<div class="form-group">
-															<label class="label" for="email">Ethereum Adress</label>
-															<input type="email" class="form-control" name="email"
-																id="email" placeholder="Email">
+															<label class="label" for="adress">Ethereum Adress</label>
+															<input type="adress" class="form-control" name="adress"
+																id="adress" placeholder="adress">
 														</div>
 													</div>
 													<div class="col-md-12">
@@ -112,14 +112,14 @@
 
 		function generateqr() {
 			var name = document.getElementById('name').value;
-			var email = document.getElementById('email').value;
+			var adress = document.getElementById('adress').value;
 			var subject = document.getElementById('subject').value;
 			var message = document.getElementById('message').value;
 
-			console.log('Name: ' + name + " " + email + " " + subject + " " + message);
+			console.log('Name: ' + name + " " + adress + " " + subject + " " + message);
 
 			var url = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=Name:" +
-			name + "%0a Email: " + email + " Subject: " + subject + " Message: " + message;
+			name + "%0a adress: " + adress + " Subject: " + subject + " Message: " + message;
 
 			var ifr = `<iframe src="${url}" height="200" width="200"></iframe>`;
 
